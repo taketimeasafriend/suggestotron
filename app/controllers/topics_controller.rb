@@ -4,7 +4,7 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.all.sort_by {|topic| topic.votes.count}  #reverse 相反 最高票数排第一
+    @topics = Topic.all.sort_by {|topic| topic.votes.count}.reverse# 相反 最高票数排第一
   end
 
   # GET /topics/1
